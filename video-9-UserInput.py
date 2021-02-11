@@ -27,8 +27,6 @@ def data():
             print(e)
 
 
-
-
 root = Tk()
 
 root.title("Gk security")
