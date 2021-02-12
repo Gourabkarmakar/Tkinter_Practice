@@ -2,19 +2,17 @@ from tkinter import *
 import sys
 import sqlite3 as sql3
 
-
-
 root = Tk()
 if sys.platform.startswith("win"):
     root.iconbitmap("hacker.ico")
 else:
     root.iconphoto(
-    True,
-    PhotoImage(file="ghost.ico")
+        True,
+        PhotoImage(file="ghost.ico")
     )
 
 try:
-    conn=sql3.connect("tkinter_1st.db")
+    conn = sql3.connect("tkinter_1st.db")
     if conn:
         print("Database Connection Sucessfull")
     else:
@@ -23,9 +21,7 @@ try:
 except Exception as e:
     print("Not Connected With DataBase")
 
-
-
-dbase=conn.cursor()
+dbase = conn.cursor()
 
 dbase.execute(
     """
