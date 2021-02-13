@@ -7,7 +7,13 @@ splash = Tk()
 win_wid_info = int(splash.winfo_screenwidth() / 3)
 win_hei_info = int(splash.winfo_screenheight() / 3)
 
-splash.geometry(f"{win_wid_info}x{win_hei_info}")
+screen_height = splash.winfo_screenheight()
+screen_width = splash.winfo_screenwidth()
+
+x_c = int((screen_width/2)-(win_wid_info/2))
+y_c = int((screen_height/2)-(win_hei_info/2))
+
+splash.geometry(f"{win_wid_info}x{win_hei_info}+{x_c}+{y_c}")
 
 # Hide The Title
 splash.overrideredirect(True)
@@ -30,7 +36,13 @@ def main_window():
     win_wid_info = int(main.winfo_screenwidth() / 3)
     win_hei_info = int(main.winfo_screenheight() / 3)
 
-    main.geometry(f"{win_wid_info}x{win_hei_info}")
+    screen_height = main.winfo_screenheight()
+    screen_width = main.winfo_screenwidth()
+
+    x_c = int((screen_width/2)-(win_wid_info/2))
+    y_c = int((screen_height/2)-(win_hei_info/2))
+
+    main.geometry(f"{win_wid_info}x{win_hei_info}+{x_c}+{y_c}")
 
     main.config(bg="gray")
 
