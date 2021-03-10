@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+import tkinter.messagebox as tmsg
 
 root = Tk()
 root.title("Tabs By | Gksecurity")
@@ -10,6 +11,7 @@ my_notebook.pack(fill="both")
 
 
 def hide():
+    tmsg._show("RedTab", "Hide Redtab")
     my_notebook.hide(1)
 
 
